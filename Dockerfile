@@ -1,4 +1,4 @@
-FROM python:3.7-slim
+FROM alpine:latest
 
 LABEL maintainer="Joshua Arulsamy <joshua.gf.arul@gmail.com>"
 
@@ -8,6 +8,8 @@ RUN apt-get -y update && \
     apt-get autoremove -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+FROM python:3.7-slim
 
 # All source code
 WORKDIR /src
