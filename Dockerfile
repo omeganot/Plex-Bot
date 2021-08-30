@@ -21,5 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy PlexBot over to src.
 COPY PlexBot/ PlexBot
 
+FROM alpine:latest
+
 # Run the bot
 CMD ["python", "-OO", "-m", "PlexBot"]
